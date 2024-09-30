@@ -6,3 +6,4 @@ project("Distributed Algorithms"
 )   
 
 
+add_subdirectory(node)
