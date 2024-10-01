@@ -10,15 +10,17 @@ protected:
   mutable std::queue<const node *> fifo_ = {};
 
 public:
-  explicit node(const char c, const std::vector<const node *> &n = {});
+  node(const char = '?');
 
   auto &neighs() { return neighs_; }
   const auto name() const { return name_; }
 
-  virtual void exec() = delete;
+  virtual void exec() = 0;
 
   void send(node *n) const;
   void recv(const node *n);
-  void connect(const node *n);
+  void connect(node *n);
+
+  virtual ~node(){};
 };
 } // namespace da

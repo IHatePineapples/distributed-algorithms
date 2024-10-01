@@ -7,9 +7,8 @@
 
 namespace da {
 
-node::node(const char c, const std::vector<const node *> &n)
-    : name_(c), neighs_(n) {
-  std::cout << c << ": Created." << std::endl;
+node::node(const char c) : name_(c) {
+  std::cout << name_ << ": Created." << std::endl;
 }
 
 void node::recv(const node *n) {
