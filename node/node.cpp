@@ -22,4 +22,11 @@ void node::send(node *n) const {
   std::cout << name_ << ": Sent <tok> to " << n->name() << std::endl;
   n->recv(this);
 };
+
+void node::connect(node *n) {
+  std::cout << name_ << " <==> " << n->name() << std::endl;
+  neighs_.push_back(n);
+  n->neighs_.push_back(this);
+}
+
 } // namespace da
