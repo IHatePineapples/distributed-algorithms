@@ -4,6 +4,7 @@
 namespace da {
 
 class node {
+protected:
   const char name_ = '?';
   std::vector<const node *> neighs_ = {};
   std::queue<const node *> fifo_ = {};
