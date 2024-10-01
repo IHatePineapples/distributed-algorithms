@@ -8,3 +8,4 @@ project("Distributed Algorithms"
 include_directories(${CMAKE_SOURCE_DIR})
 
 add_subdirectory(node)
+add_subdirectory(tree_wave)
