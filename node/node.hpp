@@ -6,8 +6,8 @@ namespace da {
 class node {
 protected:
   const char name_ = '?';
-  std::vector<const node *> neighs_ = {};
-  std::queue<const node *> fifo_ = {};
+  std::vector<node *> neighs_ = {};
+  mutable std::queue<const node *> fifo_ = {};
 
 public:
   explicit node(const char c, const std::vector<const node *> &n = {});
